@@ -1,0 +1,412 @@
+@font-face {
+  font-family: snapp;
+  src: url('src/assets/fonts/Snapp(farsgraphic).ttf');
+}
+@font-face {
+  font-family: picaflor;
+  src: url('src/assets/fonts/Picaflor-Regular.otf');
+}
+@font-face {
+  font-family: IranRounded;
+  src: url('src/assets/fonts/IRAN Rounded.ttf');
+}
+:root{
+  --gray: rgb(163, 163, 163);
+  /* --gray: #9e9e9e; mati */
+  --black: rgb(49, 43, 43);
+  /* --black: #212121; mati */
+  --white: #ffffff;
+  --orange: #ee4710;
+  /* --orange: #e65100 ; mati */
+  --orange-hover: #dc4411;
+  --corners: 24px;
+  --base-font-size: 1rem;
+}
+body{
+  margin: 0;
+}
+
+.divBody{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'IranRounded';
+  color: var(--black);
+  /* height: 100vh; */
+}
+a{
+  color: var(--white);
+  text-decoration: none;
+  /* font-size: var(--base-font-size); */
+}
+a:hover{
+  color: var(--orange);
+  transition: all .5s;
+  text-decoration: none;
+}
+
+.logo{
+  color: var(--white);
+  font-size: large;
+  letter-spacing: 2px;
+  font-family: 'picaflor';
+}
+.impWords{
+  color:var(--orange);
+  font-weight: 100;
+}
+.dropdown{
+  border: none;
+  font-family: 'IranRounded';
+}
+.outerCardDivs > span > button{
+    cursor: pointer;
+}
+@media (min-width:725px) {
+  .divBanner{
+    width: 100%;
+    height: 550px;
+    background-image: url('src/assets/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'IranRounded';
+  }
+  .navbarDiv{
+    width: -webkit-fill-available;
+  
+  }
+  .navbar1{
+    /* background: #d2d2d2a9; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 15px;
+  }
+  .navli{
+    display: flex;
+    list-style: none;
+    width: 300px;
+    align-items: center;
+    padding: 0;
+    justify-content: space-around;
+    font-size: 1.1rem;
+  }
+  .enterButton{
+    padding: 5px 30px;
+    /* color: var(--white); */
+    border: none;
+    border-radius: 50px;
+    background: var(--orange);
+    font-size: var(--base-font-size);
+    font-family: 'IranRounded';
+    color: var(--white);
+  }
+  .enterButton:hover{
+    background: var(--orange-hover);
+    transition: all .5s;
+  }
+  .menuMobile{
+    display: none;
+  }
+  .menu{
+    display: none;
+  }
+  .bannerText{
+    margin-top: 110px;
+    text-align: center;
+    color: var(--white);
+  }
+  .bannerText > h1{
+    margin-bottom: 0;
+  }
+  .bannerText > p{
+    margin-top: 0;
+  }
+  .bannerText > div{
+  display: flex;
+  justify-content: center;
+  }
+  .outerDivInputBanner{
+    width: 500px;
+    padding: 0 15px;
+    height: 60px;
+    background: var(--white);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .outerDivInputBanner > input{
+    padding: 15px 0px;
+    width: 50%;
+    font-family: 'IranRounded';
+    border-radius: 10px;
+    border: none;
+  }
+  .outerDivInputBanner > input:focus-visible{
+    outline: none;
+  }
+  .outerDivInputBanner > div {
+    display: flex;
+    padding: 5px 0;
+  }
+  .outerDivInputBanner > div > button:nth-of-type(1) {
+    border: none;
+    width: 100px;
+    font-family: 'IranRounded';
+    background: var(--orange);
+    color: var(--white);
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  .outerDivInputBanner > div > button:nth-of-type(2) {
+    display: none;
+  }
+  .horizantalCards{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+      "Mohandes-Card ."
+      ". Karfarma-Card";
+    margin-bottom: 100px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .horizantalCards > div:nth-of-type(1){
+    max-width: 600px;
+    justify-self: end;
+    width: 90%;
+    height: 200px;
+    grid-area: Mohandes-Card;
+  }
+  .horizantalCards > div:nth-of-type(2){
+    max-width: 600px;
+    width: 90%;
+    height: 200px;
+    grid-area: Karfarma-Card;
+  }
+  .h2{
+    margin-bottom: 0;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .divBody > p{
+    text-align: center;
+    padding: 0 20px 100px 20px;
+    max-width: 900px;
+  }
+  .zamineHayeKari{
+    width: 100%;
+  }
+  .twoElement{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: var(--black);
+  }
+  .twoElement > a{
+    color: var(--orange);
+    cursor: pointer;
+  }
+  .twoElement > a:hover{
+    color: var(--orange-hover);
+  }
+}
+@media (max-width:1000px){
+  .horizantalCards{
+    grid-template-areas: 
+      "Mohandes-Card"
+      "Karfarma-Card";
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 40px;
+  }
+  .horizantalCards > div:nth-of-type(1){
+    justify-self: center;
+  }
+}
+@media (max-width:725px) {
+  .divBanner{
+    width: 100%;
+    height: 500px;
+    background-image: url('src/assets/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'IranRounded';
+  }
+  .navbarDiv{
+    width: -webkit-fill-available;
+    margin-top: 15px;
+  }
+  .navbar1{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .navli{
+    display: none;
+  }
+  .navliMobile{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .navliMobile > li{
+    padding: 5px 20px;
+    margin-bottom: 5px;
+    /* border: solid 1px var(--white); */
+    font-family: 'IranRounded';
+    border-radius: 10px;
+  }
+  .enterButton{
+    display: none;
+  } 
+  .menu{
+    border: none;
+    border-radius: 50px;
+    padding: 4px 15px;
+    font-size: 25px;
+    font-family: 'picaflor';
+    font-weight: bold;
+  }
+  .menuMobile{
+    z-index: 5;
+    position: fixed;
+    background: #141413;
+    height: -webkit-fill-available;
+    width: 250px;
+    padding: 10px 10px;
+    right: 0px;
+    /* transition: all .75s ease-in; */
+  }
+  .menuMobile > header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .closeBtn{
+    border: none;
+    font-size: 30px;
+    color: var(--white);
+    background: none;
+  }
+  .bannerText{
+    margin-top: 50px;
+    text-align: center;
+    color: var(--white);
+    padding: 0 15px;
+  }
+  .bannerText > h1{
+    margin-bottom: 0;
+  }
+  .bannerText > p{
+    margin-top: 0;
+  }
+  .bannerText > div{
+    display: flex;
+    justify-content: center;
+  }
+  .outerDivInputBanner{
+    width: 350px;
+    padding: 0 15px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .outerDivInputBanner > input{
+    padding: 15px 0px;
+    width: 60%;
+    font-family: 'IranRounded';
+    border-radius: 10px;
+    border: none;
+  }
+  .outerDivInputBanner > input:focus-visible{
+    outline: none;
+  }
+  .outerDivInputBanner > div {
+    display: flex;
+    padding: 5px 0;
+  }
+  .outerDivInputBanner > div > button:nth-of-type(1) {
+    display: none;
+  }
+  .outerDivInputBanner > div > button:nth-of-type(2) {
+    border: none;
+    width: 50px;
+    font-family: 'IranRounded';
+    background: var(--orange);
+    color: var(--white);
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  .horizantalCards{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+      "Mohandes-Card"
+      "Karfarma-Card";
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 100px;
+    row-gap: 30px;
+  }
+  .horizantalCards > div:nth-of-type(1){
+    max-width: 600px;
+    justify-self: center;
+    width: 90%;
+    height: 260px;
+    grid-area: Mohandes-Card;
+  }
+  .horizantalCards > div:nth-of-type(2){
+    max-width: 600px;
+    width: 90%;
+    height: 260px;
+    grid-area: Karfarma-Card;
+  }
+  .outerCardDivs{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 3px solid var(--gray);
+  }
+  .h2{
+    margin-bottom: 0;
+    padding: 0 20px;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .divBody > p{
+    text-align: center;
+    padding: 0 20px 90px 20px;
+    max-width: 900px;
+  }
+}
+.outerCardDivs{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  border: 3px solid var(--gray);
+}
+.outerCardDivs > span:nth-of-type(2){
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.outerCardDivs > span:nth-of-type(2) > button{
+  border: none;
+  width: 100px;
+  font-family: 'IranRounded';
+  background: var(--orange);
+  color: var(--white);
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
